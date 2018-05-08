@@ -2,7 +2,8 @@ var movies = [
 	{
 		id: 1,
 		title: 'Harry Potter',
-		desc: 'Movie about some wizard'
+		desc: 'Movie about some wizard', 
+		src: "./harry.jpg alt=potter"
 	},
 	{
 		id: 2,
@@ -24,7 +25,8 @@ var movies = [
 var moviesElements = movies.map(function(movie){
 	return React.createElement('li', {key: movie.id},
 		React.createElement('h2', {}, movie.title),
-		React.createElement('p', {}, movie.desc)
+		React.createElement('p', {}, movie.desc),
+		React.createElement('img', {key: movie.src})
 		);
 });
 
